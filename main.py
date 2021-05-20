@@ -130,6 +130,8 @@ def main():
                     # Blocks special tricks
                     if len([pick for pick in CORNER_NUMBERS if pick in user_tiles]) == 2:
                         computer_pick = 2
+                    if len([pick for pick in EVEN_NUMBERS if pick in user_tiles]) == 2:
+                        computer_pick = 1
                     if (1 in user_tiles and 6 in user_tiles) or (2 in user_tiles and 9 in user_tiles):
                         computer_pick = 3
                     if (3 in user_tiles and 8 in user_tiles) or (6 in user_tiles and 7 in user_tiles):
