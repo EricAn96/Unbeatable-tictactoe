@@ -141,6 +141,10 @@ def main():
                     if (7 in user_tiles and 2 in user_tiles) or (4 in user_tiles and 3 in user_tiles) or (
                             5 in user_tiles):
                         computer_pick = 1
+                    if 5 in user_tiles and (1 in user_tiles or 3 in user_tiles or 7 in user_tiles or 9 in user_tiles):
+                        computer_pick = [pick for pick in CORNER_NUMBERS if pick in tiles_to_draw]
+                        if computer_pick:
+                            computer_pick = computer_pick[0]
 
                     # Basic defense algorithm
                     for condition in WIN_CONDITIONS:
